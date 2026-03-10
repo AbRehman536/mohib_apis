@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:mohib_apis/views/filter_task.dart';
+import 'package:mohib_apis/views/search_task.dart';
+import 'package:mohib_apis/views/update_task.dart';
 import 'package:provider/provider.dart';
-import 'package:samia_apis/views/getCompletedTask.dart';
-import 'package:samia_apis/views/getInCompletedTasl.dart';
-import 'package:samia_apis/views/update_task.dart';
 
 import '../models/taskListing.dart';
 import '../provider/user_token.dart';
 import '../services/task.dart';
 import 'create_Task.dart';
+import 'getCompletedTask.dart';
+import 'getInCompletedTasl.dart';
 
 class GetAllTask extends StatelessWidget {
   const GetAllTask({super.key});
@@ -25,6 +27,12 @@ class GetAllTask extends StatelessWidget {
           IconButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=> GetInCompletedTask()));
           }, icon: Icon(Icons.circle_outlined)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> SearchTask()));
+          }, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> FilterTask()));
+          }, icon: Icon(Icons.filter)),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){

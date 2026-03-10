@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:mohib_apis/models/task.dart';
+
 TaskListingModel taskListingModelFromJson(String str) => TaskListingModel.fromJson(json.decode(str));
 
 String taskListingModelToJson(TaskListingModel data) => json.encode(data.toJson());

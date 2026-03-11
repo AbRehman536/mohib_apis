@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mohib_apis/views/filter_task.dart';
+import 'package:mohib_apis/views/get_profile.dart';
 import 'package:mohib_apis/views/search_task.dart';
 import 'package:mohib_apis/views/update_task.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +34,9 @@ class GetAllTask extends StatelessWidget {
           IconButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=> FilterTask()));
           }, icon: Icon(Icons.filter)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> GetProfile()));
+          }, icon: Icon(Icons.person)),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
